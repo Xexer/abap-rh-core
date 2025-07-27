@@ -1,0 +1,5 @@
+@EndUserText.label: 'Contact Service'
+@ObjectModel.leadingEntity.name: 'ZRH_C_ContactTP'
+define service ZRH_CONTACT {
+  expose ZRH_C_ContactTP as Contact;
+}

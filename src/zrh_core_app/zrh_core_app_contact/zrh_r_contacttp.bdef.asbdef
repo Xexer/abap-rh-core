@@ -1,0 +1,43 @@
+managed implementation in class zbp_rh_contact unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZRH_R_ContactTP alias Contact
+persistent table zrh_contact
+draft table zrh_contactd
+lock master total etag LastChanged
+authorization master ( instance )
+etag master LocalLastChanged
+{
+  create ( authorization : global );
+  update;
+  delete;
+
+  field ( readonly ) ContactId;
+
+  draft action Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for zrh_contact
+    {
+      ContactId          = contact_id;
+      ContactTypeInt     = contact_type;
+      FirstName          = first_name;
+      LastName           = last_name;
+      Birthday           = birthday;
+      street             = street;
+      HouseNumber        = house_number;
+      Town               = town;
+      ZipCode            = zip_code;
+      Country            = country;
+      Telephone          = telephone;
+      Email              = email;
+      LocalCreatedBy     = local_created_by;
+      LocalLastChangedBy = local_last_changed_by;
+      LocalLastChanged   = local_last_changed;
+      LastChanged        = last_changed;
+    }
+}
