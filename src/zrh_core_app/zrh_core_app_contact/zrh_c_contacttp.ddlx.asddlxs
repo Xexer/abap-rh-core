@@ -1,0 +1,112 @@
+@Metadata.layer: #CUSTOMER
+@UI.headerInfo.typeName: 'Contact'
+@UI.headerInfo.typeNamePlural: 'Contacts'
+@UI.headerInfo.title.value: 'ContactId'
+@UI.headerInfo.description.value: 'ContactTypeInt'
+annotate entity ZRH_C_ContactTP with
+{
+  @UI.facet: [
+    {
+      id: 'idUserInfo',
+      position: 10,
+      type: #FIELDGROUP_REFERENCE,
+      purpose: #HEADER,
+      label: 'User details',
+      targetQualifier: 'HEAD_USER'  
+    },
+    {
+      id: 'idGeneral',
+      position: 10,
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'General',
+      targetQualifier: 'GENERAL'
+    },
+    {
+      id: 'idCollectionDetail',
+      position: 20,
+      type: #COLLECTION,
+      label: 'Details'
+    },
+    {
+      id: 'idPerson',
+      parentId: 'idCollectionDetail',
+      position: 30,
+      type: #FIELDGROUP_REFERENCE,
+      label: 'Person',
+      targetQualifier: 'PERSON'
+    },
+    {
+      id: 'idAddress',
+      parentId: 'idCollectionDetail',
+      position: 40,
+      type: #FIELDGROUP_REFERENCE,
+      label: 'Address',
+      targetQualifier: 'ADR'
+    },
+    {
+      id: 'idDigitalContact',
+      position: 50,
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'Contact',
+      targetQualifier: 'DIGITALCONTACT'
+    }      
+  ]
+
+  @UI.selectionField: [{ position: 10 }]
+  @UI.lineItem: [{ position: 10 }]
+  @UI.identification: [{ position: 10, qualifier: 'GENERAL' }]
+  ContactId;
+
+  @UI.selectionField: [{ position: 20 }]
+  @UI.lineItem: [{ position: 20 }]
+  @UI.identification: [{ position: 20, qualifier: 'GENERAL' }]
+  ContactTypeInt;
+
+  @UI.lineItem: [{ position: 30 }]
+  @UI.fieldGroup: [{ position: 10, qualifier: 'PERSON' }]
+  FirstName;
+
+  @UI.lineItem: [{ position: 40 }]
+  @UI.fieldGroup: [{ position: 20, qualifier: 'PERSON' }]
+  LastName;
+
+  @UI.fieldGroup: [{ position: 30, qualifier: 'PERSON' }]
+  Birthday;
+
+  @UI.fieldGroup: [{ position: 10, qualifier: 'ADR' }]
+  Street;
+
+  @UI.fieldGroup: [{ position: 20, qualifier: 'ADR' }]
+  HouseNumber;
+
+  @UI.lineItem: [{ position: 50 }]
+  @UI.fieldGroup: [{ position: 30, qualifier: 'ADR' }]
+  Town;
+
+  @UI.fieldGroup: [{ position: 40, qualifier: 'ADR' }]
+  ZipCode;
+
+  @UI.selectionField: [{ position: 30 }]
+  @UI.lineItem: [{ position: 60 }]
+  @UI.fieldGroup: [{ position: 50, qualifier: 'ADR' }]
+  Country;
+
+  @UI.identification: [{ position: 10, qualifier: 'DIGITALCONTACT' }]
+  Telephone;
+
+  @UI.identification: [{ position: 20, qualifier: 'DIGITALCONTACT' }]
+  Email;
+
+  @UI.fieldGroup: [{ position: 10, qualifier: 'HEAD_USER' }]
+  LocalCreatedBy;
+
+  @UI.fieldGroup: [{ position: 20, qualifier: 'HEAD_USER' }]
+  LocalLastChangedBy;
+
+  @UI.hidden: true
+  LocalLastChanged;
+
+  @UI.hidden: true
+  LastChanged;
+
+}
