@@ -4,6 +4,8 @@
   <asx:values>
    <DEVC>
     <CTEXT>Generated Package for ZRH_CORE</CTEXT>
+    <LANGUAGE>E</LANGUAGE>
+    <MASTERLANG>E</MASTERLANG>
     <RESTRICTED>X</RESTRICTED>
     <MAINPACK>S</MAINPACK>
    </DEVC>

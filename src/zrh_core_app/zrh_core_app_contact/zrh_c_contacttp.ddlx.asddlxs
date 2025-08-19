@@ -3,6 +3,7 @@
 @UI.headerInfo.typeNamePlural: 'Contacts'
 @UI.headerInfo.title.value: 'ContactId'
 @UI.headerInfo.description.value: 'ContactTypeInt'
+@UI.headerInfo.typeImageUrl: #(ContactTypeIcon)
 annotate entity ZRH_C_ContactTP with
 {
   @UI.facet: [
@@ -48,7 +49,8 @@ annotate entity ZRH_C_ContactTP with
       position: 50,
       type: #IDENTIFICATION_REFERENCE,
       label: 'Contact',
-      targetQualifier: 'DIGITALCONTACT'
+      targetQualifier: 'DIGITALCONTACT',
+      hidden: #(isHiddenContactFacet)
     }      
   ]
 
@@ -70,7 +72,7 @@ annotate entity ZRH_C_ContactTP with
   @UI.fieldGroup: [{ position: 20, qualifier: 'PERSON' }]
   LastName;
 
-  @UI.fieldGroup: [{ position: 30, qualifier: 'PERSON' }]
+  @UI.fieldGroup: [{ position: 30, qualifier: 'PERSON', hidden: #(isHiddenBirthday) }]
   Birthday;
 
   @UI.fieldGroup: [{ position: 10, qualifier: 'ADR' }]
@@ -91,10 +93,10 @@ annotate entity ZRH_C_ContactTP with
   @UI.fieldGroup: [{ position: 50, qualifier: 'ADR' }]
   Country;
 
-  @UI.identification: [{ position: 10, qualifier: 'DIGITALCONTACT' }]
+  @UI.identification: [{ position: 10, qualifier: 'DIGITALCONTACT', hidden: #(isHiddenTelephone) }]
   Telephone;
 
-  @UI.identification: [{ position: 20, qualifier: 'DIGITALCONTACT' }]
+  @UI.identification: [{ position: 20, qualifier: 'DIGITALCONTACT', hidden: #(isHiddenEmail) }]
   Email;
 
   @UI.fieldGroup: [{ position: 10, qualifier: 'HEAD_USER' }]
@@ -109,4 +111,15 @@ annotate entity ZRH_C_ContactTP with
   @UI.hidden: true
   LastChanged;
 
+  @UI.hidden: true
+  isHiddenBirthday;
+  
+  @UI.hidden: true
+  isHiddenContactFacet;
+  
+  @UI.hidden: true
+  isHiddenEmail;
+  
+  @UI.hidden: true
+  isHiddenTelephone;
 }
