@@ -1,7 +1,7 @@
 @Metadata.layer: #CUSTOMER
 @UI.headerInfo.typeName: 'Contact'
 @UI.headerInfo.typeNamePlural: 'Contacts'
-@UI.headerInfo.title.value: 'ContactId'
+@UI.headerInfo.title.value: 'FullName'
 @UI.headerInfo.description.value: 'ContactTypeInt'
 @UI.headerInfo.typeImageUrl: #(ContactTypeIcon)
 annotate entity ZRH_C_ContactTP with
@@ -55,7 +55,11 @@ annotate entity ZRH_C_ContactTP with
   ]
 
   @UI.selectionField: [{ position: 10 }]
-  @UI.lineItem: [{ position: 10 }]
+  @UI.lineItem: [{ position: 10 },
+    { type: #FOR_ACTION, dataAction: 'createAddress', label: 'Create Address' },
+    { type: #FOR_ACTION, dataAction: 'createCustomer', label: 'Create Customer' },
+    { type: #FOR_ACTION, dataAction: 'createEmployee', label: 'Create Employee' }
+  ]
   @UI.identification: [{ position: 10, qualifier: 'GENERAL' }]
   ContactId;
 

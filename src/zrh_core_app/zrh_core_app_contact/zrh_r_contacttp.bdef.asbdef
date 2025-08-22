@@ -1,6 +1,7 @@
 managed implementation in class zbp_rh_contact unique;
 strict ( 2 );
 with draft;
+auxiliary class zcl_rh_contact_behavior;
 
 define behavior for ZRH_R_ContactTP alias Contact
 persistent table zrh_contact
@@ -8,6 +9,7 @@ draft table zrh_contactd
 lock master total etag LastChanged
 authorization master ( instance )
 etag master LocalLastChanged
+late numbering
 {
   create ( authorization : global );
   update;
@@ -20,6 +22,10 @@ etag master LocalLastChanged
   draft action Discard;
   draft action Resume;
   draft determine action Prepare;
+
+  static factory action ( authorization : global ) createAddress [1];
+  static factory action ( authorization : global ) createCustomer [1];
+  static factory action ( authorization : global ) createEmployee [1];
 
   mapping for zrh_contact
     {

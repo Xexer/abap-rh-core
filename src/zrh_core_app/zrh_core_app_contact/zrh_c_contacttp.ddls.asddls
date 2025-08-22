@@ -2,6 +2,7 @@
 @EndUserText.label: 'RH: Contact (Consumption)'
 @Metadata.allowExtensions: true
 @Search.searchable: true
+@ObjectModel.semanticKey: [ 'ContactId' ]
 define root view entity ZRH_C_ContactTP
   provider contract transactional_query
   as projection on ZRH_R_ContactTP
@@ -21,6 +22,7 @@ define root view entity ZRH_C_ContactTP
           @Search.defaultSearchElement: true
           @Search.fuzzinessThreshold: 0.8
           LastName,
+          _ContactInfo.FullName,
           Birthday,
           @Search.defaultSearchElement: true
           @Search.fuzzinessThreshold: 0.8

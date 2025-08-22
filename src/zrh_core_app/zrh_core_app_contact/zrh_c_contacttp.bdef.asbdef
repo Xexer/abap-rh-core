@@ -4,7 +4,6 @@ use draft;
 
 define behavior for ZRH_C_ContactTP alias Contact
 {
-  use create;
   use update;
   use delete;
 
@@ -13,4 +12,8 @@ define behavior for ZRH_C_ContactTP alias Contact
   use action Discard;
   use action Resume;
   use action Prepare;
+
+  use action createAddress;
+  use action createCustomer;
+  use action createEmployee;
 }
