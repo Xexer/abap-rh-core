@@ -27,6 +27,16 @@ late numbering
   static factory action ( authorization : global ) createCustomer [1];
   static factory action ( authorization : global ) createEmployee [1];
 
+  validation checkNameIsFilled on save { create; update; }
+  validation checkMailForEmployee on save { create; update; }
+  validation checkContactForCustomer on save { create; update; }
+
+  determination fillAddressInformation on modify { field ZipCode; }
+
+  side effects {
+    field ZipCode affects $self;
+  }
+
   mapping for zrh_contact
     {
       ContactId          = contact_id;

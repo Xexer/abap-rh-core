@@ -6,11 +6,18 @@ CLASS zcl_rh_contact_behavior DEFINITION
   PUBLIC SECTION.
     TYPES create_mapped TYPE RESPONSE FOR MAPPED EARLY zrh_r_contacttp.
 
-    TYPES:
-      BEGIN OF number_result,
-        new_number TYPE zrh_contact_id,
-        log        TYPE REF TO zif_aml_log,
-      END OF number_result.
+    TYPES: BEGIN OF number_result,
+             new_number TYPE zrh_contact_id,
+             log        TYPE REF TO zif_aml_log,
+           END OF number_result.
+
+    TYPES imported_keys TYPE TABLE FOR VALIDATION zrh_r_contacttp\\contact~checkcontactforcustomer.
+
+    TYPES read_result   TYPE TABLE FOR READ RESULT zrh_r_contacttp\\contact.
+
+    METHODS get_selected_entries
+      IMPORTING !keys         TYPE imported_keys
+      RETURNING VALUE(result) TYPE read_result.
 
     METHODS create_new_contact
       IMPORTING !cid          TYPE abp_behv_cid
@@ -87,5 +94,12 @@ CLASS zcl_rh_contact_behavior IMPLEMENTATION.
     result-new_number = substring( val = new_entry-ContactTypeInt
                                    off = 0
                                    len = 1 ) && external_number.
+  ENDMETHOD.
+
+
+  METHOD get_selected_entries.
+    READ ENTITIES OF ZRH_R_ContactTP IN LOCAL MODE
+         ENTITY Contact ALL FIELDS WITH CORRESPONDING #( keys )
+         RESULT result.
   ENDMETHOD.
 ENDCLASS.

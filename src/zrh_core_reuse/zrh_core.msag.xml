@@ -20,6 +20,24 @@
      <MSGNR>001</MSGNR>
      <TEXT>Numberrange &amp;1 returned &amp;2</TEXT>
     </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZRH_CORE</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>For Customer there is a Mail or Telephone mandatory</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZRH_CORE</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>For Employee there is a Mail mandatory</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZRH_CORE</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Firstname and Lastname has to be filled</TEXT>
+    </T100>
    </T100>
   </asx:values>
  </asx:abap>
