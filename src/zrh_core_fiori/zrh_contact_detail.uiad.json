@@ -1,0 +1,41 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Contact App",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_ALV5_DEFAULT"
+  },
+  "ui5AppDetails": {
+    "appId": "rh.core.zrhcontact"
+  },
+  "navigation": {
+    "targetMappingId": "ZRH_CONTACT_DETAIL_TM",
+    "semanticObject": "ZRH_CONTACT",
+    "action": "manage",
+    "desktop": true,
+    "tablet": true,
+    "phone": true,
+    "additionalParameterHandling": "notAllowed"
+  },
+  "tiles": [
+    {
+      "id": "DEFAULT_TILE",
+      "tileType": "dynamic",
+      "isDefault": true,
+      "standard": {
+        "title": "Contact Management",
+        "subtitle": "Recycling-Heroes",
+        "icon": "sap-icon://contacts",
+        "dynamic": {
+          "serviceBaseUrl": "/sap/opu/odata4/sap/zrh_ui_contact_o4/srvd/sap/zrh_contact/0001/Contact/$count",
+          "refreshInterval": 30,
+          "numberUnit": "Contact(s)"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Manage all contacts",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Contact Management"
+  },
+  "ui5AppDetails": {
+    "appId": "rh.core.zrhcontact"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_A05080A0057FA2AEBAE9A07658BEEF0617C026A7_TM",
+    "semanticObject": "ZRH_CONTACT",
+    "action": "manage",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_A05080A0057FA2AEBAE9A07658BEEF0617C026A7_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Contact Management",
+        "subtitle": "Recycling-Heroes"
+      }
+    }
+  ]
+}
