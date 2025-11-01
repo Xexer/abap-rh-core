@@ -28,6 +28,9 @@ CLASS lhc_Contact DEFINITION INHERITING FROM cl_abap_behavior_handler.
 
     METHODS checkNameIsFilled FOR VALIDATE ON SAVE
       IMPORTING keys FOR Contact~checkNameIsFilled.
+
+    METHODS get_instance_features FOR INSTANCE FEATURES
+      IMPORTING keys REQUEST requested_features FOR Contact RESULT result.
 ENDCLASS.
 
 
@@ -37,6 +40,40 @@ CLASS lhc_Contact IMPLEMENTATION.
 
 
   METHOD get_global_authorizations.
+    DATA(helper) = NEW zcl_rh_contact_behavior( ).
+    DATA(auth_for_creation) = helper->get_auth_create( ).
+
+    IF auth_for_creation-address = abap_false.
+      result-%action-createAddress = if_abap_behv=>auth-unauthorized.
+    ENDIF.
+
+    IF auth_for_creation-customer = abap_false.
+      result-%action-createCustomer = if_abap_behv=>auth-unauthorized.
+    ENDIF.
+
+    IF auth_for_creation-employee = abap_false.
+      result-%action-createEmployee = if_abap_behv=>auth-unauthorized.
+    ENDIF.
+  ENDMETHOD.
+
+
+  METHOD get_instance_features.
+    DATA(helper) = NEW zcl_rh_contact_behavior( ).
+    DATA(found_entities) = helper->get_selected_entries( CORRESPONDING #( keys ) ).
+
+    LOOP AT found_entities INTO DATA(entity).
+      INSERT VALUE #( %tky = entity-%tky ) INTO TABLE result REFERENCE INTO DATA(result_entry).
+      DATA(auth_actions) = helper->get_auth_actions( entity-ContactTypeInt ).
+
+      IF auth_actions-change = abap_false.
+        result_entry->%update = if_abap_behv=>fc-o-disabled.
+        result_entry->%action-Edit = if_abap_behv=>fc-o-disabled.
+      ENDIF.
+
+      IF auth_actions-delete = abap_false.
+        result_entry->%delete = if_abap_behv=>fc-o-disabled.
+      ENDIF.
+    ENDLOOP.
   ENDMETHOD.
 
 

@@ -1,0 +1,11 @@
+@EndUserText.label: 'Contact Access'
+@MappingRole: true
+define role ZRH_C_CONTACTTP {
+  grant
+    select
+      on
+        ZRH_C_CONTACTTP
+          where
+            inheriting conditions from entity ZRH_R_CONTACTTP;
+            
+}

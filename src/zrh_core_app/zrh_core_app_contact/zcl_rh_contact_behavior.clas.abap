@@ -15,6 +15,31 @@ CLASS zcl_rh_contact_behavior DEFINITION
 
     TYPES read_result   TYPE TABLE FOR READ RESULT zrh_r_contacttp\\contact.
 
+    TYPES activity_base TYPE c LENGTH 2.
+
+    TYPES:
+      BEGIN OF result_auth_create,
+        address  TYPE abap_boolean,
+        customer TYPE abap_boolean,
+        employee TYPE abap_boolean,
+      END OF result_auth_create.
+
+    TYPES:
+      BEGIN OF result_auth_actions,
+        create  TYPE abap_boolean,
+        change  TYPE abap_boolean,
+        display TYPE abap_boolean,
+        delete  TYPE abap_boolean,
+      END OF result_auth_actions.
+
+    CONSTANTS:
+      BEGIN OF activities,
+        create  TYPE activity_base VALUE '01',
+        change  TYPE activity_base VALUE '02',
+        display TYPE activity_base VALUE '03',
+        delete  TYPE activity_base VALUE '06',
+      END OF activities.
+
     METHODS get_selected_entries
       IMPORTING !keys         TYPE imported_keys
       RETURNING VALUE(result) TYPE read_result.
@@ -28,10 +53,58 @@ CLASS zcl_rh_contact_behavior DEFINITION
     METHODS get_new_number
       IMPORTING pid           TYPE abp_behv_pid
       RETURNING VALUE(result) TYPE number_result.
+
+    METHODS has_authority
+      IMPORTING activity      TYPE activity_base
+                contact_type  TYPE zrh_contact_type
+      RETURNING VALUE(result) TYPE abap_boolean.
+
+    METHODS get_auth_create
+      RETURNING VALUE(result) TYPE result_auth_create.
+
+    METHODS get_auth_actions
+      IMPORTING contact_type  TYPE zrh_contact_type
+      RETURNING VALUE(result) TYPE result_auth_actions.
 ENDCLASS.
 
 
 CLASS zcl_rh_contact_behavior IMPLEMENTATION.
+  METHOD has_authority.
+    AUTHORITY-CHECK OBJECT 'ZRHCONTACT'
+                    ID 'ACTVT' FIELD activity
+                    ID 'ZRH_CTYPE' FIELD contact_type.
+
+    RETURN xsdbool( sy-subrc = 0 ).
+  ENDMETHOD.
+
+
+  METHOD get_auth_create.
+    result-address  = has_authority( activity     = activities-create
+                                     contact_type = zif_rh_contact_constants=>contact_type-address ).
+
+    result-customer = has_authority( activity     = activities-create
+                                     contact_type = zif_rh_contact_constants=>contact_type-customer ).
+
+    result-employee = has_authority( activity     = activities-create
+                                     contact_type = zif_rh_contact_constants=>contact_type-employee ).
+  ENDMETHOD.
+
+
+  METHOD get_auth_actions.
+    result-create  = has_authority( activity     = activities-create
+                                    contact_type = contact_type ).
+
+    result-change  = has_authority( activity     = activities-change
+                                    contact_type = contact_type ).
+
+    result-display = has_authority( activity     = activities-display
+                                    contact_type = contact_type ).
+
+    result-delete  = has_authority( activity     = activities-delete
+                                    contact_type = contact_type ).
+  ENDMETHOD.
+
+
   METHOD create_new_contact.
     MODIFY ENTITIES OF ZRH_R_ContactTP IN LOCAL MODE
            ENTITY Contact

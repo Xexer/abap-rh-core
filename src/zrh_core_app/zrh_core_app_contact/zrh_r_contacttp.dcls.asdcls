@@ -1,0 +1,11 @@
+@EndUserText.label: 'Contact Access'
+@MappingRole: true
+define role ZRH_R_CONTACTTP {
+  grant 
+    select
+      on
+        ZRH_R_CONTACTTP
+          where
+            (ContactTypeInt) = aspect pfcg_auth(ZRHCONTACT, ZRH_CTYPE, ACTVT = '03');
+            
+}

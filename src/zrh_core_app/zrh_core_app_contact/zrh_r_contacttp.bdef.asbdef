@@ -12,12 +12,12 @@ etag master LocalLastChanged
 late numbering
 {
   create ( authorization : global );
-  update;
-  delete;
+  update ( features : instance );
+  delete ( features : instance );
 
   field ( readonly ) ContactId;
 
-  draft action Edit;
+  draft action ( features : instance ) Edit;
   draft action Activate optimized;
   draft action Discard;
   draft action Resume;
@@ -33,7 +33,8 @@ late numbering
 
   determination fillAddressInformation on modify { field ZipCode; }
 
-  side effects {
+  side effects
+  {
     field ZipCode affects $self;
   }
 
