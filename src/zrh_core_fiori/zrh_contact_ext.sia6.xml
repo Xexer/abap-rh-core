@@ -38,7 +38,7 @@
       <TEXT>ZRHCONTACT</TEXT>
       <AUTH_ITEM>
        <item>
-        <UUID>LvoSRWIjH+Ct4KpBZ1v+Rg==</UUID>
+        <UUID>/oIJe6SpH+CvlHjwKx19Bw==</UUID>
         <AUTH_OBJECT>ZRHCONTACT</AUTH_OBJECT>
         <AUTH_OBJECT_INSTANCE>0001</AUTH_OBJECT_INSTANCE>
         <TEXT>ZRHCONTACT</TEXT>
@@ -46,18 +46,22 @@
         <VALUES>
          <item>
           <FIELD>ACTVT</FIELD>
-          <VALUE>Create or generate,Display,Change</VALUE>
+          <VALUE>Create or generate,Delete,Display,Change</VALUE>
           <VALUES>
            <item>
-            <UUID>LvoSRWIjH+Ct4KpBZ1weRg==</UUID>
+            <UUID>/oIJe6SpH+CvlJ5Fu2m9Bw==</UUID>
             <LOW_VALUE>01</LOW_VALUE>
            </item>
            <item>
-            <UUID>LvoSRWIjH+Ct4KpBZ1xeRg==</UUID>
+            <UUID>/oIJe6SpH+CvlJ5Fu2odBw==</UUID>
+            <LOW_VALUE>06</LOW_VALUE>
+           </item>
+           <item>
+            <UUID>/oIJe6SpH+CvlJ5Fu2n9Bw==</UUID>
             <LOW_VALUE>03</LOW_VALUE>
            </item>
            <item>
-            <UUID>LvoSRWIjH+Ct4KpBZ1w+Rg==</UUID>
+            <UUID>/oIJe6SpH+CvlJ5Fu2ndBw==</UUID>
             <LOW_VALUE>02</LOW_VALUE>
            </item>
           </VALUES>
@@ -67,11 +71,9 @@
          </item>
          <item>
           <FIELD>ZRH_CTYPE</FIELD>
-          <VALUE>EM</VALUE>
           <VALUES>
            <item>
-            <UUID>LvoSRWIjH+Ct4KpBZ1x+Rg==</UUID>
-            <LOW_VALUE>EM</LOW_VALUE>
+            <UUID>/oIJe6SpH+CvlJ5Fu2o9Bw==</UUID>
            </item>
           </VALUES>
           <TEXT>Contact Type</TEXT>
