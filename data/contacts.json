@@ -1,0 +1,15 @@
+[
+    {
+        "ContactTypeInt": "CU",
+        "FirstName": "Master",
+        "LastName": "of Desaster",
+        "Birthday": "",
+        "Street": "Bla",
+        "HouseNumber": "1",
+        "Town": "Cologne",
+        "ZipCode": "51107",
+        "Country": "DE",
+        "Telephone": "+49123",
+        "Email": "master@desaster.de"
+    }
+]
