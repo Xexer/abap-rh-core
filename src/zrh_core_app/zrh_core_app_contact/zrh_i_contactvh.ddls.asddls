@@ -6,7 +6,10 @@ define view entity ZRH_I_ContactVH
   key ContactId,
       @Consumption.valueHelpDefinition: [{ entity: { name: 'ZRH_I_ContactTypeVH', element : 'ContactTypeInt' } }]
       ContactTypeInt,
-      concat_with_space(FirstName, LastName, 1) as FullName,
+      case ContactTypeInt
+        when 'AD' then concat_with_space( concat( Street, ',' ), Town, 1)
+        else concat_with_space(FirstName, LastName, 1)
+      end as FullName,
       Town,
       Country
 }

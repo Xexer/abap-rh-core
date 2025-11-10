@@ -68,13 +68,15 @@ annotate entity ZRH_C_ContactTP with
   @UI.identification: [{ position: 20, qualifier: 'GENERAL' }]
   ContactTypeInt;
 
-  @UI.lineItem: [{ position: 30 }]
   @UI.fieldGroup: [{ position: 10, qualifier: 'PERSON' }]
   FirstName;
 
-  @UI.lineItem: [{ position: 40 }]
   @UI.fieldGroup: [{ position: 20, qualifier: 'PERSON' }]
   LastName;
+
+  @UI.lineItem: [{ position: 30 }]
+  @EndUserText.label: 'Name'
+  FullName;
 
   @UI.fieldGroup: [{ position: 30, qualifier: 'PERSON', hidden: #(isHiddenBirthday) }]
   Birthday;
