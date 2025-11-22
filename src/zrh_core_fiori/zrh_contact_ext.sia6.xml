@@ -46,23 +46,23 @@
         <VALUES>
          <item>
           <FIELD>ACTVT</FIELD>
-          <VALUE>Create or generate,Delete,Display,Change</VALUE>
+          <VALUE>Display,Delete,Change,Create or generate</VALUE>
           <VALUES>
            <item>
-            <UUID>/oIJe6SpH+CvlJ5Fu2m9Bw==</UUID>
-            <LOW_VALUE>01</LOW_VALUE>
+            <UUID>/oIJe6SpH+CvlJ5Fu2n9Bw==</UUID>
+            <LOW_VALUE>03</LOW_VALUE>
            </item>
            <item>
             <UUID>/oIJe6SpH+CvlJ5Fu2odBw==</UUID>
             <LOW_VALUE>06</LOW_VALUE>
            </item>
            <item>
-            <UUID>/oIJe6SpH+CvlJ5Fu2n9Bw==</UUID>
-            <LOW_VALUE>03</LOW_VALUE>
-           </item>
-           <item>
             <UUID>/oIJe6SpH+CvlJ5Fu2ndBw==</UUID>
             <LOW_VALUE>02</LOW_VALUE>
+           </item>
+           <item>
+            <UUID>/oIJe6SpH+CvlJ5Fu2m9Bw==</UUID>
+            <LOW_VALUE>01</LOW_VALUE>
            </item>
           </VALUES>
           <TEXT>Activity</TEXT>

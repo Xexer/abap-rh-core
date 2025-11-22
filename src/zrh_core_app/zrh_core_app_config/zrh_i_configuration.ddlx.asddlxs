@@ -1,0 +1,54 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Config', 
+    typeNamePlural: 'Configs', 
+    title: {
+      type: #STANDARD, 
+      label: 'RH: Configuration', 
+      value: 'ConfigId'
+    }
+  }
+}
+annotate view ZRH_I_Configuration with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  @UI.facet: [ {
+    id: 'ZRH_I_Configuration', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'RH: Configuration', 
+    position: 1 
+  } ]
+  ConfigId;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  @UI.lineItem: [ {
+    position: 2 
+  } ]
+  Process;
+  
+  @UI.identification: [ {
+    position: 3 
+  } ]
+  @UI.lineItem: [ {
+    position: 3 
+  } ]
+  Value;
+  
+  @UI.identification: [ {
+    position: 4 
+  } ]
+  @UI.lineItem: [ {
+    position: 4 
+  } ]
+  @EndUserText.label: 'Value (High)'
+  ValueHigh;
+}

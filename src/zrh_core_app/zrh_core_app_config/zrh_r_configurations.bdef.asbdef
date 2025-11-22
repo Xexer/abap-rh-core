@@ -1,0 +1,64 @@
+managed with additional save implementation in class ZBP_RH_CONFIGURATION unique;
+strict;
+with draft;
+define behavior for ZRH_R_ConfigurationS alias ConfigAll
+draft table zrh_config_ds
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master ( global )
+{
+  field ( readonly )
+  SingletonID,
+  TransportRequestID;
+
+  field ( notrigger )
+  SingletonID,
+  HideTransport,
+  LastChangedAtMax;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  association _Config { create ( features : instance ); with draft; }
+}
+
+define behavior for ZRH_I_Configuration alias Config ##UNMAPPED_FIELD
+persistent table zrh_config
+draft table zrh_config_d
+lock dependent by _ConfigAll
+authorization dependent by _ConfigAll
+{
+  field ( mandatory : create )
+  ConfigId;
+
+  field ( readonly )
+  SingletonID;
+
+  field ( readonly : update )
+  ConfigId;
+
+  field ( notrigger )
+  SingletonID;
+
+
+  update ( features : global );
+  delete ( features : global );
+
+  mapping for zrh_config
+    {
+      ConfigId  = CONFIG_ID;
+      Process   = PROCESS;
+      Value     = VALUE;
+      ValueHigh = VALUE_HIGH;
+    }
+
+  association _ConfigAll { with draft; }
+}

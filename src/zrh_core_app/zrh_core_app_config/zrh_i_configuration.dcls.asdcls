@@ -1,0 +1,5 @@
+@MappingRole: true
+define role ZRH_I_Configuration {
+  grant select on ZRH_I_Configuration
+  where ( ) = ASPECT pfcg_auth ( 'S_TABU_NAM', ACTVT = '03', TABLE = 'ZRH_I_CONFIGURATION' );
+}

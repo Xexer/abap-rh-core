@@ -1,0 +1,7 @@
+@ObjectModel.leadingEntity.name: 'ZRH_R_ConfigurationS'
+define service ZRH_CONFIGURATION {
+  expose ZRH_R_ConfigurationS as ConfigAll;
+  expose ZRH_I_Configuration  as Config;
+  expose ZRH_I_ConfigVH;
+  expose ZRH_I_ProcessVH;
+}
