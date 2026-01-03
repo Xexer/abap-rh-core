@@ -15,9 +15,9 @@ ENDCLASS.
 
 CLASS zcl_rh_configuration IMPLEMENTATION.
   METHOD zif_rh_configuration~get_value.
-    DATA(found_configurations) = select_configs( config_id ).
+    DATA(found_configurations) = zif_rh_configuration~get_values( config_id ).
     DATA(found_entry) = VALUE #( found_configurations[ 1 ] OPTIONAL ).
-    RETURN found_entry-Value.
+    RETURN found_entry-low.
   ENDMETHOD.
 
 
