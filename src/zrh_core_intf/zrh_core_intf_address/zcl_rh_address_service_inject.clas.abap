@@ -5,7 +5,7 @@ CLASS zcl_rh_address_service_inject DEFINITION
 
   PUBLIC SECTION.
     CLASS-METHODS inject_address
-      IMPORTING double TYPE REF TO zif_rh_address_service.
+      IMPORTING double TYPE REF TO zif_rh_address_service OPTIONAL.
 ENDCLASS.
 
 
