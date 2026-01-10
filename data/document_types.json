@@ -1,0 +1,32 @@
+[
+    {
+        "DocumentType": "PROFILE_PICTURE",
+        "Description": "Profile Picture",
+        "Process": "EMPLOYEE"
+    },
+    {
+        "DocumentType": "CV",
+        "Description": "Curriculum Vitae",
+        "Process": "EMPLOYEE"
+    },
+    {
+        "DocumentType": "ASSESSMENT",
+        "Description": "Assessment",
+        "Process": "EMPLOYEE"
+    },
+    {
+        "DocumentType": "CUSTOMER_PICTURE",
+        "Description": "Customer Picture",
+        "Process": "CORE"
+    },
+    {
+        "DocumentType": "VEHICLE_PICTURE",
+        "Description": "Vehicle Picture",
+        "Process": "CORE"
+    },
+    {
+        "DocumentType": "PICKUP_LIST",
+        "Description": "Collection List",
+        "Process": "RECYCLING"
+    }
+]
