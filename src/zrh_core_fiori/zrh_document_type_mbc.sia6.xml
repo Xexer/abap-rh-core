@@ -4,9 +4,9 @@
   <asx:values>
    <SIA6>
     <MAIN_OBJECT>
-     <NAME>ZRH_CONFIGURATION_MBC</NAME>
+     <NAME>ZRH_DOCUMENT_TYPE_MBC</NAME>
      <TYPE>SIA6</TYPE>
-     <DESCRIPTION>RH: Configuration</DESCRIPTION>
+     <DESCRIPTION>Document Type</DESCRIPTION>
      <RESPONSIBLE>CB9980000024</RESPONSIBLE>
      <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
      <MASTER_SYSTEM>AED</MASTER_SYSTEM>
@@ -15,17 +15,17 @@
      </PACKAGE_REF>
      <ABAP_LANGU_VERSION>5</ABAP_LANGU_VERSION>
     </MAIN_OBJECT>
-    <APP_ID>ZRH_CONFIGURATION_MBC</APP_ID>
+    <APP_ID>ZRH_DOCUMENT_TYPE_MBC</APP_ID>
     <APP_TYPE>MBC</APP_TYPE>
     <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
     <SERVICE>
      <item>
-      <REL_NAME>ZRH_UI_CONFIGURATION_O4</REL_NAME>
+      <REL_NAME>ZRH_UI_DOCUMENT_TYPE_O4</REL_NAME>
       <REL_TYPE>G4BA</REL_TYPE>
-      <APP_ID>ZRH_CONFIGURATION_MBC</APP_ID>
-      <SRVC_NAME>10E2104B622A8238A88B50EBCB61A6</SRVC_NAME>
+      <APP_ID>ZRH_DOCUMENT_TYPE_MBC</APP_ID>
+      <SRVC_NAME>872735A7E99D4091547B18F48D816C</SRVC_NAME>
       <SRVC_TYPE>HT</SRVC_TYPE>
-      <TEXT>Maintain RH: Configuration</TEXT>
+      <TEXT>Maintain Document Type</TEXT>
       <TYPE_TEXT>OData V4</TYPE_TEXT>
      </item>
     </SERVICE>
@@ -36,7 +36,7 @@
       <TEXT>Table Access by Generic Standard Tools</TEXT>
       <AUTH_ITEM>
        <item>
-        <UUID>lloUQv/MH9Cx8Tp8Tjeh1A==</UUID>
+        <UUID>ysPCqUahH+C7wc/fVdMipg==</UUID>
         <AUTH_OBJECT>S_TABU_NAM</AUTH_OBJECT>
         <AUTH_OBJECT_INSTANCE>0001</AUTH_OBJECT_INSTANCE>
         <TEXT>Table Access by Generic Standard Tools</TEXT>
@@ -47,7 +47,7 @@
           <VALUE>Display change documents</VALUE>
           <VALUES>
            <item>
-            <UUID>lloUQv/MH9Cx8Tp8TjfB1A==</UUID>
+            <UUID>ysPCqUahH+C7wc/fVdNCpg==</UUID>
             <LOW_VALUE>08</LOW_VALUE>
            </item>
           </VALUES>
@@ -57,11 +57,11 @@
          </item>
          <item>
           <FIELD>TABLE</FIELD>
-          <VALUE>ZRH_CONFIG</VALUE>
+          <VALUE>ZRH_DOC_TYPE</VALUE>
           <VALUES>
            <item>
-            <UUID>lloUQv/MH9Cx8Tp8Tjfh1A==</UUID>
-            <LOW_VALUE>ZRH_CONFIG</LOW_VALUE>
+            <UUID>ysPCqUahH+C7wc/fVdNipg==</UUID>
+            <LOW_VALUE>ZRH_DOC_TYPE</LOW_VALUE>
            </item>
           </VALUES>
           <TEXT>Table Name</TEXT>
@@ -70,7 +70,7 @@
         </VALUES>
        </item>
        <item>
-        <UUID>lloUQv/MH9Cx8Tp8TjgB1A==</UUID>
+        <UUID>ysPCqUahH+C7wc/fVdOCpg==</UUID>
         <AUTH_OBJECT>S_TABU_NAM</AUTH_OBJECT>
         <AUTH_OBJECT_INSTANCE>0002</AUTH_OBJECT_INSTANCE>
         <TEXT>Table Access by Generic Standard Tools</TEXT>
@@ -81,11 +81,11 @@
           <VALUE>Display,Change</VALUE>
           <VALUES>
            <item>
-            <UUID>lloUQv/MH9Cx8Tp8TjhB1A==</UUID>
+            <UUID>ysPCqUahH+C7wc/fVdPCpg==</UUID>
             <LOW_VALUE>03</LOW_VALUE>
            </item>
            <item>
-            <UUID>lloUQv/MH9Cx8Tp8Tjgh1A==</UUID>
+            <UUID>ysPCqUahH+C7wc/fVdOipg==</UUID>
             <LOW_VALUE>02</LOW_VALUE>
            </item>
           </VALUES>
@@ -95,15 +95,15 @@
          </item>
          <item>
           <FIELD>TABLE</FIELD>
-          <VALUE>ZRH_CONFIG,ZRH_I_CONFIGURATION</VALUE>
+          <VALUE>ZRH_DOC_TYPE,ZRH_I_DOCUMENTTYPE</VALUE>
           <VALUES>
            <item>
-            <UUID>lloUQv/MH9Cx8Tp8Tjhh1A==</UUID>
-            <LOW_VALUE>ZRH_CONFIG</LOW_VALUE>
+            <UUID>ysPCqUahH+C7wc/fVdPipg==</UUID>
+            <LOW_VALUE>ZRH_DOC_TYPE</LOW_VALUE>
            </item>
            <item>
-            <UUID>lloUQv/MH9Cx8Tp8TjiB1A==</UUID>
-            <LOW_VALUE>ZRH_I_CONFIGURATION</LOW_VALUE>
+            <UUID>ysPCqUahH+C7wc/fVdQCpg==</UUID>
+            <LOW_VALUE>ZRH_I_DOCUMENTTYPE</LOW_VALUE>
            </item>
           </VALUES>
           <TEXT>Table Name</TEXT>

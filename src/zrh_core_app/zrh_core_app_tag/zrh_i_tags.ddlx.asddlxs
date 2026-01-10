@@ -1,0 +1,37 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Tags', 
+    typeNamePlural: 'Tagss', 
+    title: {
+      type: #STANDARD, 
+      label: 'Tags', 
+      value: 'TagId'
+    }
+  }
+}
+annotate view ZRH_I_Tags with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  @UI.facet: [ {
+    id: 'ZRH_I_Tags', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Tags', 
+    position: 1 
+  } ]
+  TagId;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  @UI.lineItem: [ {
+    position: 2 
+  } ]
+  Description;
+}

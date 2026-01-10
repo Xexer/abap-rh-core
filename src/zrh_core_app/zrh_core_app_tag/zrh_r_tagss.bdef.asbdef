@@ -1,0 +1,60 @@
+managed with additional save implementation in class ZBP_RH_TAGS unique;
+strict;
+with draft;
+define behavior for ZRH_R_TagsS alias TagsAll
+draft table ZRH_TAG_D_S
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master( global )
+{
+  field ( readonly )
+   SingletonID;
+
+  field ( notrigger )
+   SingletonID,
+   LastChangedAtMax;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  association _Tags { create ( features : instance ); with draft; }
+
+}
+
+define behavior for ZRH_I_Tags alias Tags ##UNMAPPED_FIELD
+persistent table ZRH_TAG
+draft table ZRH_TAG_D
+lock dependent by _TagsAll
+authorization dependent by _TagsAll
+{
+  field ( readonly )
+   SingletonID,
+   TagId;
+
+  field ( numbering : managed )
+   TagId;
+
+  field ( notrigger )
+   SingletonID;
+
+
+  update( features : global );
+  delete( features : global );
+
+  mapping for ZRH_TAG
+  {
+    TagId = TAG_ID;
+    Description = DESCRIPTION;
+  }
+
+  association _TagsAll { with draft; }
+
+}

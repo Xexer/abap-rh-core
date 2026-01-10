@@ -1,0 +1,45 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'DocumentType', 
+    typeNamePlural: 'DocumentTypes', 
+    title: {
+      type: #STANDARD, 
+      label: 'Document Type', 
+      value: 'DocumentType'
+    }
+  }
+}
+annotate view ZRH_I_DocumentType with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  @UI.facet: [ {
+    id: 'ZRH_I_DocumentType', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Document Type', 
+    position: 1 
+  } ]
+  DocumentType;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  @UI.lineItem: [ {
+    position: 2 
+  } ]
+  Description;
+  
+  @UI.identification: [ {
+    position: 3 
+  } ]
+  @UI.lineItem: [ {
+    position: 3 
+  } ]
+  process;
+}

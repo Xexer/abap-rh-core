@@ -1,0 +1,6 @@
+@ObjectModel.leadingEntity.name: 'ZRH_I_DocumentTypeS'
+define service ZRH_DOCUMENT_TYPE {
+  expose ZRH_I_DocumentTypeS as DocumentTypeAll;
+  expose ZRH_I_DocumentType  as DocumentType;
+  expose ZRH_I_ProcessVH;
+}

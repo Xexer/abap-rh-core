@@ -1,0 +1,65 @@
+managed with additional save implementation in class ZBP_RH_DOCUMENT_TYPE unique;
+strict;
+with draft;
+define behavior for ZRH_I_DocumentTypeS alias DocumentTypeAll
+draft table zrh_doc_typ_d_s
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master ( global )
+{
+  field ( readonly )
+  SingletonID;
+
+  field ( features : instance )
+  TransportRequestID;
+
+  field ( notrigger )
+  SingletonID,
+  LastChangedAtMax;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit with additional implementation;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  association _DocumentType { create ( features : instance ); with draft; }
+}
+
+define behavior for ZRH_I_DocumentType alias DocumentType ##UNMAPPED_FIELD
+persistent table zrh_doc_type
+draft table zrh_doc_type_d
+lock dependent by _DocumentTypeAll
+authorization dependent by _DocumentTypeAll
+{
+  field ( mandatory : create )
+  DocumentType;
+
+  field ( readonly )
+  SingletonID;
+
+  field ( readonly : update )
+  DocumentType;
+
+  field ( notrigger )
+  SingletonID;
+
+
+  update ( features : global );
+  delete ( features : global );
+
+  mapping for zrh_doc_type
+    {
+      DocumentType = document_type;
+      Description  = description;
+      Process      = process;
+    }
+
+  association _DocumentTypeAll { with draft; }
+
+}

@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZRH_R_TagsS'
+define service ZRH_TAGS {
+  expose ZRH_R_TAGSS as TagsAll;
+  expose ZRH_I_TAGS as Tags;
+}
