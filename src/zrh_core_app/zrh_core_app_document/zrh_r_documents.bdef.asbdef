@@ -1,0 +1,71 @@
+managed implementation in class ZBP_RH_DOCUMENTS unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZRH_R_Documents alias ZrhRDocuments
+persistent table zrh_doc
+extensible
+draft table zrh_doc_d
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master ( global )
+{
+  field ( numbering : managed, readonly ) DocumentID;
+
+  field ( readonly )
+  LocalCreatedBy,
+  LocalCreatedAt,
+  LocalLastChangedBy,
+  LocalLastChangedAt,
+  LastChangedAt;
+
+  create;
+  update;
+  delete;
+
+  association _Tags { create; with draft; }
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for zrh_doc corresponding extensible
+    {
+      DocumentID         = document_id;
+      DocumentType       = document_type;
+      Document           = document;
+      Mimetype           = mimetype;
+      Filename           = filename;
+      Title              = title;
+      Description        = description;
+      LocalCreatedBy     = local_created_by;
+      LocalCreatedAt     = local_created_at;
+      LocalLastChangedBy = local_last_changed_by;
+      LocalLastChangedAt = local_last_changed_at;
+      LastChangedAt      = last_changed_at;
+    }
+
+}
+
+define behavior for ZRH_I_DocumentTags alias Tags
+persistent table zrh_doc_tag
+draft table zrh_doc_tag_D
+lock dependent by _Document
+authorization dependent by _Document
+{
+  field ( mandatory : create, readonly : update ) TagId;
+  field ( readonly ) DocumentId;
+
+  update;
+  delete;
+
+  association _Document { with draft; }
+
+  mapping for zrh_doc_tag
+    {
+      DocumentId = document_id;
+      TagId = tag_id;
+    }
+}

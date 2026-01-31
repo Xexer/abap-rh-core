@@ -1,0 +1,30 @@
+projection implementation in class ZBP_C_DOCUMNTSC unique;
+strict ( 2 );
+extensible;
+use draft;
+use side effects;
+define behavior for ZRH_C_Documents alias ZrhCDocuments
+extensible
+use etag
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+
+  use association _Tags { create; with draft; }
+}
+
+define behavior for ZRH_C_DocumentTags alias Tags
+use etag
+{
+  use update;
+  use delete;
+
+  use association _Document { with draft; }
+}

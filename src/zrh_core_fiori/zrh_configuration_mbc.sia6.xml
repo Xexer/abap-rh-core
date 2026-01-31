@@ -78,15 +78,15 @@
         <VALUES>
          <item>
           <FIELD>ACTVT</FIELD>
-          <VALUE>Display,Change</VALUE>
+          <VALUE>Change,Display</VALUE>
           <VALUES>
-           <item>
-            <UUID>lloUQv/MH9Cx8Tp8TjhB1A==</UUID>
-            <LOW_VALUE>03</LOW_VALUE>
-           </item>
            <item>
             <UUID>lloUQv/MH9Cx8Tp8Tjgh1A==</UUID>
             <LOW_VALUE>02</LOW_VALUE>
+           </item>
+           <item>
+            <UUID>lloUQv/MH9Cx8Tp8TjhB1A==</UUID>
+            <LOW_VALUE>03</LOW_VALUE>
            </item>
           </VALUES>
           <TEXT>Activity</TEXT>
@@ -95,15 +95,15 @@
          </item>
          <item>
           <FIELD>TABLE</FIELD>
-          <VALUE>ZRH_CONFIG,ZRH_I_CONFIGURATION</VALUE>
+          <VALUE>ZRH_I_CONFIGURATION,ZRH_CONFIG</VALUE>
           <VALUES>
-           <item>
-            <UUID>lloUQv/MH9Cx8Tp8Tjhh1A==</UUID>
-            <LOW_VALUE>ZRH_CONFIG</LOW_VALUE>
-           </item>
            <item>
             <UUID>lloUQv/MH9Cx8Tp8TjiB1A==</UUID>
             <LOW_VALUE>ZRH_I_CONFIGURATION</LOW_VALUE>
+           </item>
+           <item>
+            <UUID>lloUQv/MH9Cx8Tp8Tjhh1A==</UUID>
+            <LOW_VALUE>ZRH_CONFIG</LOW_VALUE>
            </item>
           </VALUES>
           <TEXT>Table Name</TEXT>

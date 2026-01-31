@@ -1,0 +1,13 @@
+@EndUserText: {
+  label: 'Service Definition for ZRH_C_Documents'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZRH_C_Documents'
+  }
+}
+define service ZRH_DOCUMENTS
+  provider contracts odata_v4_ui {
+  expose ZRH_C_Documents;
+  expose ZRH_C_DocumentTags;
+}

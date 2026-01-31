@@ -1,0 +1,11 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "SAP Object Node Type ZRH_DOCUMENTS",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "name": "ZRH_Documents",
+  "sapObjectType": "ZRH_Documents",
+  "rootNode": true
+}

@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZRH_C_Documents'
+@MappingRole: true
+define role ZRH_C_Documents {
+  grant select on ZRH_C_Documents
+  where INHERITING CONDITIONS FROM ENTITY ZRH_R_Documents REPLACING { ROOT WITH _BaseEntity };
+}

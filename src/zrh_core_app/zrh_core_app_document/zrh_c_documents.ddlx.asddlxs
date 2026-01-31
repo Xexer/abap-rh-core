@@ -1,0 +1,77 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'DocumentID'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Description'
+annotate view ZRH_C_Documents with
+{
+  @UI.facet: [
+    {
+      id: 'idGeneral',
+      label: 'General Information',
+      position: 10 ,
+      type: #IDENTIFICATION_REFERENCE,
+      targetQualifier: 'GENERAL'
+    },
+    {
+      id: 'idDocument',
+      label: 'Document',
+      position: 20,
+      type: #IDENTIFICATION_REFERENCE,
+      targetQualifier: 'DOC'
+    },
+    {
+      id: 'idAdmin',
+      label: 'Admin Fields',
+      position: 30,
+      type: #IDENTIFICATION_REFERENCE,
+      targetQualifier: 'ADMIN'
+    }
+  ]
+
+  @UI.selectionField: [ { position: 10  } ]
+  @UI.lineItem: [ { position: 10  } ]
+  @UI.identification: [ { position: 10 , qualifier: 'GENERAL' } ]
+  DocumentID;
+
+  @UI.selectionField: [ { position: 20 } ]
+  @UI.lineItem: [ { position: 20  } ]
+  @UI.identification: [ { position: 20 , qualifier: 'GENERAL' } ]
+  DocumentType;
+
+  @UI.identification: [ { position: 30 , qualifier: 'DOC' } ]
+  Document;
+
+  @UI.hidden: true
+  Mimetype;
+
+  @UI.hidden: true
+  Filename;
+
+  @UI.lineItem: [ { position: 60  } ]
+  @UI.identification: [ { position: 60 , qualifier: 'GENERAL' } ]
+  Title;
+
+  @UI.lineItem: [ { position: 70  } ]
+  @UI.identification: [ { position: 70 , qualifier: 'GENERAL' } ]
+  @UI.multiLineText: true
+  Description;
+
+  @UI.identification: [ { position: 80 , qualifier: 'ADMIN' } ]
+  LocalCreatedBy;
+
+  @UI.identification: [ { position: 90 , qualifier: 'ADMIN' } ]
+  LocalCreatedAt;
+
+  @UI.identification: [ { position: 100 , qualifier: 'ADMIN' } ]
+  LocalLastChangedBy;
+
+  @UI.identification: [ { position: 110 , qualifier: 'ADMIN' } ]
+  LocalLastChangedAt;
+
+  @UI.identification: [ { position: 120 , qualifier: 'ADMIN' } ]
+  LastChangedAt;
+
+  @UI.identification: [{ position: 130, qualifier: 'GENERAL', value: '_Tags.TagId' }]
+  _Tags;
+}
