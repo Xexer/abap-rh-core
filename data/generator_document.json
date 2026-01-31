@@ -6,7 +6,7 @@
         {
             "Name": "ZRH_DOCUMENT_ID",
             "Description": "Document ID",
-            "BaseType": "RAW",
+            "Base_Type": "RAW",
             "Length": 16,
             "Decimals": 0,
             "Case_Sensitive": ""
@@ -14,7 +14,7 @@
         {
             "Name": "ZRH_DOCUMENT_STREAM",
             "Description": "Document Stream",
-            "BaseType": "RAWSTRING",
+            "Base_Type": "RAWSTRING",
             "Length": 0,
             "Decimals": 0,
             "Case_Sensitive": ""
@@ -22,7 +22,7 @@
         {
             "Name": "ZRH_MIMETYPE",
             "Description": "Mimetype",
-            "BaseType": "CHAR",
+            "Base_Type": "CHAR",
             "Length": 128,
             "Decimals": 0,
             "Case_Sensitive": "X"
@@ -30,7 +30,7 @@
         {
             "Name": "ZRH_FILENAME",
             "Description": "Filename",
-            "BaseType": "CHAR",
+            "Base_Type": "CHAR",
             "Length": 128,
             "Decimals": 0,
             "Case_Sensitive": "X"
@@ -38,7 +38,7 @@
         {
             "Name": "ZRH_TITLE",
             "Description": "Title",
-            "BaseType": "CHAR",
+            "Base_Type": "CHAR",
             "Length": 160,
             "Decimals": 0,
             "Case_Sensitive": "X"
