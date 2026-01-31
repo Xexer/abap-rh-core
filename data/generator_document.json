@@ -1,7 +1,5 @@
 {
     "Package": "ZRH_CORE_APP_DOCUMENT",
-    "Transport": "",
-    "Prefix": "",
     "Domains": [
         {
             "Name": "ZRH_DOCUMENT_ID",
