@@ -1,10 +1,10 @@
 {
     "Package": "ZRH_CORE_APP_DOCUMENT",
     "Transport": "",
-    "Prefix": "ZRH",
+    "Prefix": "",
     "Domains": [
         {
-            "Name": "DOCUMENT_ID",
+            "Name": "ZRH_DOCUMENT_ID",
             "Description": "Document ID",
             "BaseType": "RAW",
             "Length": 16,
@@ -12,7 +12,7 @@
             "Case_Sensitive": ""
         },
         {
-            "Name": "DOCUMENT_STREAM",
+            "Name": "ZRH_DOCUMENT_STREAM",
             "Description": "Document Stream",
             "BaseType": "RAWSTRING",
             "Length": 0,
@@ -20,7 +20,7 @@
             "Case_Sensitive": ""
         },
         {
-            "Name": "MIMETYPE",
+            "Name": "ZRH_MIMETYPE",
             "Description": "Mimetype",
             "BaseType": "CHAR",
             "Length": 128,
@@ -28,7 +28,7 @@
             "Case_Sensitive": "X"
         },
         {
-            "Name": "FILENAME",
+            "Name": "ZRH_FILENAME",
             "Description": "Filename",
             "BaseType": "CHAR",
             "Length": 128,
@@ -36,7 +36,7 @@
             "Case_Sensitive": "X"
         },
         {
-            "Name": "TITLE",
+            "Name": "ZRH_TITLE",
             "Description": "Title",
             "BaseType": "CHAR",
             "Length": 160,
@@ -46,34 +46,34 @@
     ],
     "Data_Elements": [
         {
-            "Name": "DOCUMENT_ID",
+            "Name": "ZRH_DOCUMENT_ID",
             "Description": "Document ID",
             "Label": "Document ID",
-            "Domain": "DOCUMENT_ID"
+            "Domain": "ZRH_DOCUMENT_ID"
         },
         {
-            "Name": "DOCUMENT_STREAM",
+            "Name": "ZRH_DOCUMENT_STREAM",
             "Description": "Document (Stream)",
             "Label": "Document (Stream)",
-            "Domain": "DOCUMENT_STREAM"
+            "Domain": "ZRH_DOCUMENT_STREAM"
         },
         {
-            "Name": "MIMETYPE",
+            "Name": "ZRH_MIMETYPE",
             "Description": "Mimetype",
             "Label": "Mimetype",
-            "Domain": "MIMETYPE"
+            "Domain": "ZRH_MIMETYPE"
         },
         {
-            "Name": "FILENAME",
+            "Name": "ZRH_FILENAME",
             "Description": "Filename",
             "Label": "Filename",
-            "Domain": "FILENAME"
+            "Domain": "ZRH_FILENAME"
         },
         {
-            "Name": "TITLE",
+            "Name": "ZRH_TITLE",
             "Description": "Title",
             "Label": "Title",
-            "Domain": "TITLE"
+            "Domain": "ZRH_TITLE"
         }
     ],
     "Ddic_Tables": [
@@ -83,32 +83,52 @@
             "Fields": [
                 {
                     "Name": "DOCUMENT_ID",
-                    "Data_Element": "DOCUMENT_ID",
+                    "Data_Element": "ZRH_DOCUMENT_ID",
                     "Key": "X"
                 },
                 {
                     "Name": "DOCUMENT_TYPE",
-                    "Data_Element": "DOCUMENT_TYPE"
+                    "Data_Element": "ZRH_DOCUMENT_TYPE"
                 },
                 {
                     "Name": "DOCUMENT",
-                    "Data_Element": "DOCUMENT_STREAM"
+                    "Data_Element": "ZRH_DOCUMENT_STREAM"
                 },
                 {
                     "Name": "MIMETYPE",
-                    "Data_Element": "MIMETYPE"
+                    "Data_Element": "ZRH_MIMETYPE"
                 },
                 {
                     "Name": "FILENAME",
-                    "Data_Element": "FILENAME"
+                    "Data_Element": "ZRH_FILENAME"
                 },
                 {
                     "Name": "TITLE",
-                    "Data_Element": "TITLE"
+                    "Data_Element": "ZRH_TITLE"
                 },
                 {
                     "Name": "DESCRIPTION",
-                    "Data_Element": "DESCRIPTION"
+                    "Data_Element": "ZRH_DESCRIPTION"
+                },
+                {
+                    "Name": "LOCAL_CREATED_BY",
+                    "Data_Element": "ABP_CREATION_USER"
+                },
+                {
+                    "Name": "LOCAL_CREATED_AT",
+                    "Data_Element": "ABP_CREATION_TSTMPL"
+                },
+                {
+                    "Name": "LOCAL_LAST_CHANGED_BY",
+                    "Data_Element": "ABP_LOCINST_LASTCHANGE_USER"
+                },
+                {
+                    "Name": "LOCAL_LAST_CHANGED_AT",
+                    "Data_Element": "ABP_LOCINST_LASTCHANGE_TSTMPL"
+                },
+                {
+                    "Name": "LAST_CHANGED_AT",
+                    "Data_Element": "ABP_LASTCHANGE_TSTMPL"
                 }
             ]
         },
@@ -118,12 +138,12 @@
             "Fields": [
                 {
                     "Name": "DOCUMENT_ID",
-                    "Data_Element": "DOCUMENT_TYPE",
+                    "Data_Element": "ZRH_DOCUMENT_TYPE",
                     "Key": "X"
                 },
                 {
                     "Name": "TAG_ID",
-                    "Data_Element": "TAG_ID",
+                    "Data_Element": "ZRH_TAG_ID",
                     "Key": "X"
                 }
             ]
