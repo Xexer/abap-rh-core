@@ -72,6 +72,11 @@
             "Description": "RH: Documents",
             "Fields": [
                 {
+                    "Name": "CLIENT",
+                    "Data_Element": "MANDT",
+                    "Key": "X"
+                },                
+                {
                     "Name": "DOCUMENT_ID",
                     "Data_Element": "ZRH_DOCUMENT_ID",
                     "Key": "X"
@@ -126,6 +131,11 @@
             "Name": "ZRH_DOC_TAG",
             "Description": "RH: Document Tags",
             "Fields": [
+                {
+                    "Name": "CLIENT",
+                    "Data_Element": "MANDT",
+                    "Key": "X"
+                },                  
                 {
                     "Name": "DOCUMENT_ID",
                     "Data_Element": "ZRH_DOCUMENT_TYPE",
