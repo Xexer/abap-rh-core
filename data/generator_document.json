@@ -5,7 +5,7 @@
     "Domains": [
         {
             "Name": "DOCUMENT_ID",
-            "Description": "",
+            "Description": "Document ID",
             "BaseType": "RAW",
             "Length": 16,
             "Decimals": 0,
@@ -13,7 +13,7 @@
         },
         {
             "Name": "DOCUMENT_STREAM",
-            "Description": "",
+            "Description": "Document Stream",
             "BaseType": "RAWSTRING",
             "Length": 0,
             "Decimals": 0,
@@ -21,7 +21,7 @@
         },
         {
             "Name": "MIMETYPE",
-            "Description": "",
+            "Description": "Mimetype",
             "BaseType": "CHAR",
             "Length": 128,
             "Decimals": 0,
@@ -29,7 +29,7 @@
         },
         {
             "Name": "FILENAME",
-            "Description": "",
+            "Description": "Filename",
             "BaseType": "CHAR",
             "Length": 128,
             "Decimals": 0,
@@ -37,7 +37,7 @@
         },
         {
             "Name": "TITLE",
-            "Description": "",
+            "Description": "Title",
             "BaseType": "CHAR",
             "Length": 160,
             "Decimals": 0,
