@@ -9,7 +9,7 @@
             "BaseType": "RAW",
             "Length": 16,
             "Decimals": 0,
-            "CaseSensitive": ""
+            "Case_Sensitive": ""
         },
         {
             "Name": "DOCUMENT_STREAM",
@@ -17,7 +17,7 @@
             "BaseType": "RAWSTRING",
             "Length": 0,
             "Decimals": 0,
-            "CaseSensitive": ""
+            "Case_Sensitive": ""
         },
         {
             "Name": "MIMETYPE",
@@ -25,7 +25,7 @@
             "BaseType": "CHAR",
             "Length": 128,
             "Decimals": 0,
-            "CaseSensitive": "X"
+            "Case_Sensitive": "X"
         },
         {
             "Name": "FILENAME",
@@ -33,7 +33,7 @@
             "BaseType": "CHAR",
             "Length": 128,
             "Decimals": 0,
-            "CaseSensitive": "X"
+            "Case_Sensitive": "X"
         },
         {
             "Name": "TITLE",
@@ -41,10 +41,10 @@
             "BaseType": "CHAR",
             "Length": 160,
             "Decimals": 0,
-            "CaseSensitive": "X"
+            "Case_Sensitive": "X"
         }
     ],
-    "DataElements": [
+    "Data_Elements": [
         {
             "Name": "DOCUMENT_ID",
             "Description": "Document ID",
@@ -76,40 +76,39 @@
             "Domain": "TITLE"
         }
     ],
-    "AbstractEntities": [],
-    "DdicTables": [
+    "Ddic_Tables": [
         {
             "Name": "ZRH_DOC",
             "Description": "RH: Documents",
             "Fields": [
                 {
                     "Name": "DOCUMENT_ID",
-                    "DataElement": "DOCUMENT_ID",
+                    "Data_Element": "DOCUMENT_ID",
                     "Key": "X"
                 },
                 {
                     "Name": "DOCUMENT_TYPE",
-                    "DataElement": "DOCUMENT_TYPE"
+                    "Data_Element": "DOCUMENT_TYPE"
                 },
                 {
                     "Name": "DOCUMENT",
-                    "DataElement": "DOCUMENT_STREAM"
+                    "Data_Element": "DOCUMENT_STREAM"
                 },
                 {
                     "Name": "MIMETYPE",
-                    "DataElement": "MIMETYPE"
+                    "Data_Element": "MIMETYPE"
                 },
                 {
                     "Name": "FILENAME",
-                    "DataElement": "FILENAME"
+                    "Data_Element": "FILENAME"
                 },
                 {
                     "Name": "TITLE",
-                    "DataElement": "TITLE"
+                    "Data_Element": "TITLE"
                 },
                 {
                     "Name": "DESCRIPTION",
-                    "DataElement": "DESCRIPTION"
+                    "Data_Element": "DESCRIPTION"
                 }
             ]
         },
@@ -119,12 +118,12 @@
             "Fields": [
                 {
                     "Name": "DOCUMENT_ID",
-                    "DataElement": "DOCUMENT_TYPE",
+                    "Data_Element": "DOCUMENT_TYPE",
                     "Key": "X"
                 },
                 {
                     "Name": "TAG_ID",
-                    "DataElement": "TAG_ID",
+                    "Data_Element": "TAG_ID",
                     "Key": "X"
                 }
             ]
