@@ -1,0 +1,133 @@
+{
+    "Package": "ZRH_CORE_APP_DOCUMENT",
+    "Transport": "",
+    "Prefix": "ZRH",
+    "Domains": [
+        {
+            "Name": "DOCUMENT_ID",
+            "Description": "",
+            "BaseType": "RAW",
+            "Length": 16,
+            "Decimals": 0,
+            "CaseSensitive": ""
+        },
+        {
+            "Name": "DOCUMENT_STREAM",
+            "Description": "",
+            "BaseType": "RAWSTRING",
+            "Length": 0,
+            "Decimals": 0,
+            "CaseSensitive": ""
+        },
+        {
+            "Name": "MIMETYPE",
+            "Description": "",
+            "BaseType": "CHAR",
+            "Length": 128,
+            "Decimals": 0,
+            "CaseSensitive": "X"
+        },
+        {
+            "Name": "FILENAME",
+            "Description": "",
+            "BaseType": "CHAR",
+            "Length": 128,
+            "Decimals": 0,
+            "CaseSensitive": "X"
+        },
+        {
+            "Name": "TITLE",
+            "Description": "",
+            "BaseType": "CHAR",
+            "Length": 160,
+            "Decimals": 0,
+            "CaseSensitive": "X"
+        }
+    ],
+    "DataElements": [
+        {
+            "Name": "DOCUMENT_ID",
+            "Description": "Document ID",
+            "Label": "Document ID",
+            "Domain": "DOCUMENT_ID"
+        },
+        {
+            "Name": "DOCUMENT_STREAM",
+            "Description": "Document (Stream)",
+            "Label": "Document (Stream)",
+            "Domain": "DOCUMENT_STREAM"
+        },
+        {
+            "Name": "MIMETYPE",
+            "Description": "Mimetype",
+            "Label": "Mimetype",
+            "Domain": "MIMETYPE"
+        },
+        {
+            "Name": "FILENAME",
+            "Description": "Filename",
+            "Label": "Filename",
+            "Domain": "FILENAME"
+        },
+        {
+            "Name": "TITLE",
+            "Description": "Title",
+            "Label": "Title",
+            "Domain": "TITLE"
+        }
+    ],
+    "AbstractEntities": [],
+    "DdicTables": [
+        {
+            "Name": "ZRH_DOC",
+            "Description": "RH: Documents",
+            "Fields": [
+                {
+                    "Name": "DOCUMENT_ID",
+                    "DataElement": "DOCUMENT_ID",
+                    "Key": "X"
+                },
+                {
+                    "Name": "DOCUMENT_TYPE",
+                    "DataElement": "DOCUMENT_TYPE"
+                },
+                {
+                    "Name": "DOCUMENT",
+                    "DataElement": "DOCUMENT_STREAM"
+                },
+                {
+                    "Name": "MIMETYPE",
+                    "DataElement": "MIMETYPE"
+                },
+                {
+                    "Name": "FILENAME",
+                    "DataElement": "FILENAME"
+                },
+                {
+                    "Name": "TITLE",
+                    "DataElement": "TITLE"
+                },
+                {
+                    "Name": "DESCRIPTION",
+                    "DataElement": "DESCRIPTION"
+                }
+            ]
+        },
+        {
+            "Name": "ZRH_DOC_TAG",
+            "Description": "RH: Document Tags",
+            "Fields": [
+                {
+                    "Name": "DOCUMENT_ID",
+                    "DataElement": "DOCUMENT_TYPE",
+                    "Key": "X"
+                },
+                {
+                    "Name": "TAG_ID",
+                    "DataElement": "TAG_ID",
+                    "Key": "X"
+                }
+            ]
+        }
+    ]
+}
