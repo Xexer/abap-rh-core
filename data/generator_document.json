@@ -138,7 +138,7 @@
                 },                  
                 {
                     "Name": "DOCUMENT_ID",
-                    "Data_Element": "ZRH_DOCUMENT_TYPE",
+                    "Data_Element": "ZRH_DOCUMENT_ID",
                     "Key": "X"
                 },
                 {
