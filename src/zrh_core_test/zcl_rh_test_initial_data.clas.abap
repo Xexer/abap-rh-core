@@ -6,7 +6,20 @@ CLASS zcl_rh_test_initial_data DEFINITION
     INTERFACES if_oo_adt_classrun.
 
   PRIVATE SECTION.
-    CONSTANTS github_path TYPE string VALUE `https://raw.githubusercontent.com/Xexer/abap-rh-core/refs/heads/main/data/`.
+    TYPES:
+      BEGIN OF document_file,
+        DocumentType TYPE zrh_document_type,
+        Path         TYPE string,
+        Filename     TYPE zrh_filename,
+        Mimetype     TYPE zrh_mimetype,
+        Title        TYPE zrh_title,
+        Description  TYPE zrh_description,
+        Tags         TYPE string_table,
+      END OF document_file,
+      document_files TYPE STANDARD TABLE OF document_file WITH EMPTY KEY.
+
+    CONSTANTS github_path     TYPE string VALUE `https://raw.githubusercontent.com/Xexer/abap-rh-core/refs/heads/main/data/`.
+    CONSTANTS attachment_path TYPE string VALUE `https://raw.githubusercontent.com/Xexer/abap-rh-core/refs/heads/main/attachments/`.
 
     METHODS load_contacts
       IMPORTING !out TYPE REF TO if_oo_adt_classrun_out.
@@ -20,6 +33,13 @@ CLASS zcl_rh_test_initial_data DEFINITION
 
     METHODS load_document_types
       IMPORTING !out TYPE REF TO if_oo_adt_classrun_out.
+
+    METHODS load_documents
+      IMPORTING !out TYPE REF TO if_oo_adt_classrun_out.
+
+    METHODS get_attachment
+      IMPORTING !path         TYPE string
+      RETURNING VALUE(result) TYPE xstring.
 ENDCLASS.
 
 
@@ -28,11 +48,79 @@ CLASS zcl_rh_test_initial_data IMPLEMENTATION.
 *    DELETE FROM zrh_contact.
     DELETE FROM zrh_tag.
     DELETE FROM zrh_doc_type.
+    DELETE FROM zrh_doc.
+    DELETE FROM zrh_doc_tag.
     COMMIT WORK.
 
 *    load_contacts( out ).
     load_tags( out ).
     load_document_types( out ).
+    load_documents( out ).
+  ENDMETHOD.
+
+
+  METHOD load_documents.
+    DATA document_files TYPE document_files.
+    DATA new_documents  TYPE TABLE FOR CREATE ZRH_R_Documents.
+    DATA new_tags       TYPE TABLE FOR CREATE ZRH_R_Documents\_Tags.
+
+    get_container_for_file( `documents.json` )->get_json_data( CHANGING generic = document_files ).
+
+    SELECT FROM zrh_tag
+      FIELDS tag_id, description
+      INTO TABLE @DATA(tags).
+
+    LOOP AT document_files INTO DATA(document_file).
+      DATA(document_cid) = |DOC{ sy-tabix }|.
+
+      INSERT VALUE #( %cid         = document_cid
+                      DocumentType = document_file-DocumentType
+                      Document     = get_attachment( document_file-Path )
+                      Mimetype     = document_file-Mimetype
+                      Filename     = document_file-Filename
+                      Title        = document_file-Title
+                      Description  = document_file-Description )
+             INTO TABLE new_documents.
+
+      INSERT VALUE #( %cid_ref = document_cid ) INTO TABLE new_tags REFERENCE INTO DATA(new_tag).
+      LOOP AT document_file-Tags INTO DATA(tag_description).
+        TRY.
+            INSERT VALUE #( %cid  = |{ document_cid }_TAG{ sy-tabix }|
+                            TagId = tags[ description = tag_description ]-tag_id )
+                   INTO TABLE new_tag->%target.
+          CATCH cx_sy_itab_line_not_found.
+            out->write( |Tag { tag_description } not found for { document_file-Filename }| ).
+        ENDTRY.
+      ENDLOOP.
+    ENDLOOP.
+
+    MODIFY ENTITIES OF ZRH_R_Documents
+           ENTITY ZrhRDocuments
+           CREATE FIELDS ( DocumentType Document Mimetype Filename Title Description )
+           WITH new_documents
+           CREATE BY \_Tags FIELDS ( TagId )
+           WITH new_tags
+           FAILED DATA(failed)
+           MAPPED DATA(mapped)
+           REPORTED DATA(reported).
+
+    COMMIT ENTITIES.
+
+    out->write( failed-zrhrdocuments ).
+    out->write( mapped-zrhrdocuments ).
+    out->write( reported-zrhrdocuments ).
+  ENDMETHOD.
+
+
+  METHOD get_attachment.
+    TRY.
+        DATA(destination) = cl_http_destination_provider=>create_by_url( attachment_path && path ).
+        DATA(client) = cl_web_http_client_manager=>create_by_http_destination( destination ).
+        result = client->execute( if_web_http_client=>get )->get_binary( ).
+        client->close( ).
+      CATCH cx_http_dest_provider_error cx_web_http_client_error.
+        CLEAR result.
+    ENDTRY.
   ENDMETHOD.
 
 

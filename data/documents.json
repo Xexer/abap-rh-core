@@ -1,0 +1,577 @@
+[
+    {
+        "DocumentType": "PROFILE_PICTURE",
+        "Path": "employees/ute_mahler_profile.jpg",
+        "Filename": "ute_mahler_profile.jpg",
+        "Mimetype": "image/jpeg",
+        "Title": "Profile picture Ute Mahler",
+        "Description": "Profile picture of employee Ute Mahler",
+        "Tags": [
+            "Picture",
+            "Personal"
+        ]
+    },
+    {
+        "DocumentType": "CV",
+        "Path": "employees/ute_mahler_cv.pdf",
+        "Filename": "ute_mahler_cv.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Curriculum vitae Ute Mahler",
+        "Description": "CV of employee Ute Mahler",
+        "Tags": [
+            "PDF",
+            "Personal"
+        ]
+    },
+    {
+        "DocumentType": "ASSESSMENT",
+        "Path": "employees/ute_mahler_assessment.pdf",
+        "Filename": "ute_mahler_assessment.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Assessment 2025 Ute Mahler",
+        "Description": "Annual assessment 2025 of Ute Mahler",
+        "Tags": [
+            "PDF",
+            "Personal",
+            "Important"
+        ]
+    },
+    {
+        "DocumentType": "PROFILE_PICTURE",
+        "Path": "employees/mike_gartner_profile.jpg",
+        "Filename": "mike_gartner_profile.jpg",
+        "Mimetype": "image/jpeg",
+        "Title": "Profile picture Mike Gärtner",
+        "Description": "Profile picture of employee Mike Gärtner",
+        "Tags": [
+            "Picture",
+            "Personal"
+        ]
+    },
+    {
+        "DocumentType": "CV",
+        "Path": "employees/mike_gartner_cv.pdf",
+        "Filename": "mike_gartner_cv.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Curriculum vitae Mike Gärtner",
+        "Description": "CV of employee Mike Gärtner",
+        "Tags": [
+            "PDF",
+            "Personal"
+        ]
+    },
+    {
+        "DocumentType": "ASSESSMENT",
+        "Path": "employees/mike_gartner_assessment.pdf",
+        "Filename": "mike_gartner_assessment.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Assessment 2025 Mike Gärtner",
+        "Description": "Annual assessment 2025 of Mike Gärtner",
+        "Tags": [
+            "PDF",
+            "Personal",
+            "Important"
+        ]
+    },
+    {
+        "DocumentType": "PROFILE_PICTURE",
+        "Path": "employees/abdul_basit_duqaq_asghar_profile.jpg",
+        "Filename": "abdul_basit_duqaq_asghar_profile.jpg",
+        "Mimetype": "image/jpeg",
+        "Title": "Profile picture Abdul-Basit Duqaq Asghar",
+        "Description": "Profile picture of employee Abdul-Basit Duqaq Asghar",
+        "Tags": [
+            "Picture",
+            "Personal"
+        ]
+    },
+    {
+        "DocumentType": "CV",
+        "Path": "employees/abdul_basit_duqaq_asghar_cv.pdf",
+        "Filename": "abdul_basit_duqaq_asghar_cv.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Curriculum vitae Abdul-Basit Duqaq Asghar",
+        "Description": "CV of employee Abdul-Basit Duqaq Asghar",
+        "Tags": [
+            "PDF",
+            "Personal"
+        ]
+    },
+    {
+        "DocumentType": "ASSESSMENT",
+        "Path": "employees/abdul_basit_duqaq_asghar_assessment.pdf",
+        "Filename": "abdul_basit_duqaq_asghar_assessment.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Assessment 2025 Abdul-Basit Duqaq Asghar",
+        "Description": "Annual assessment 2025 of Abdul-Basit Duqaq Asghar",
+        "Tags": [
+            "PDF",
+            "Personal",
+            "Important"
+        ]
+    },
+    {
+        "DocumentType": "PROFILE_PICTURE",
+        "Path": "employees/robert_h_roybal_profile.jpg",
+        "Filename": "robert_h_roybal_profile.jpg",
+        "Mimetype": "image/jpeg",
+        "Title": "Profile picture Robert H. Roybal",
+        "Description": "Profile picture of employee Robert H. Roybal",
+        "Tags": [
+            "Picture",
+            "Personal"
+        ]
+    },
+    {
+        "DocumentType": "CV",
+        "Path": "employees/robert_h_roybal_cv.pdf",
+        "Filename": "robert_h_roybal_cv.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Curriculum vitae Robert H. Roybal",
+        "Description": "CV of employee Robert H. Roybal",
+        "Tags": [
+            "PDF",
+            "Personal"
+        ]
+    },
+    {
+        "DocumentType": "ASSESSMENT",
+        "Path": "employees/robert_h_roybal_assessment.pdf",
+        "Filename": "robert_h_roybal_assessment.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Assessment 2025 Robert H. Roybal",
+        "Description": "Annual assessment 2025 of Robert H. Roybal",
+        "Tags": [
+            "PDF",
+            "Personal",
+            "Important"
+        ]
+    },
+    {
+        "DocumentType": "PROFILE_PICTURE",
+        "Path": "employees/an_yin_profile.jpg",
+        "Filename": "an_yin_profile.jpg",
+        "Mimetype": "image/jpeg",
+        "Title": "Profile picture An Yin",
+        "Description": "Profile picture of employee An Yin",
+        "Tags": [
+            "Picture",
+            "Personal"
+        ]
+    },
+    {
+        "DocumentType": "CV",
+        "Path": "employees/an_yin_cv.pdf",
+        "Filename": "an_yin_cv.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Curriculum vitae An Yin",
+        "Description": "CV of employee An Yin",
+        "Tags": [
+            "PDF",
+            "Personal"
+        ]
+    },
+    {
+        "DocumentType": "ASSESSMENT",
+        "Path": "employees/an_yin_assessment.pdf",
+        "Filename": "an_yin_assessment.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Assessment 2025 An Yin",
+        "Description": "Annual assessment 2025 of An Yin",
+        "Tags": [
+            "PDF",
+            "Personal",
+            "Important"
+        ]
+    },
+    {
+        "DocumentType": "PROFILE_PICTURE",
+        "Path": "employees/sun_cheng_profile.jpg",
+        "Filename": "sun_cheng_profile.jpg",
+        "Mimetype": "image/jpeg",
+        "Title": "Profile picture Sun Cheng",
+        "Description": "Profile picture of employee Sun Cheng",
+        "Tags": [
+            "Picture",
+            "Personal"
+        ]
+    },
+    {
+        "DocumentType": "CV",
+        "Path": "employees/sun_cheng_cv.pdf",
+        "Filename": "sun_cheng_cv.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Curriculum vitae Sun Cheng",
+        "Description": "CV of employee Sun Cheng",
+        "Tags": [
+            "PDF",
+            "Personal"
+        ]
+    },
+    {
+        "DocumentType": "ASSESSMENT",
+        "Path": "employees/sun_cheng_assessment.pdf",
+        "Filename": "sun_cheng_assessment.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Assessment 2025 Sun Cheng",
+        "Description": "Annual assessment 2025 of Sun Cheng",
+        "Tags": [
+            "PDF",
+            "Personal",
+            "Important"
+        ]
+    },
+    {
+        "DocumentType": "PROFILE_PICTURE",
+        "Path": "employees/amitee_lamy_profile.jpg",
+        "Filename": "amitee_lamy_profile.jpg",
+        "Mimetype": "image/jpeg",
+        "Title": "Profile picture Amitee Lamy",
+        "Description": "Profile picture of employee Amitee Lamy",
+        "Tags": [
+            "Picture",
+            "Personal"
+        ]
+    },
+    {
+        "DocumentType": "CV",
+        "Path": "employees/amitee_lamy_cv.pdf",
+        "Filename": "amitee_lamy_cv.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Curriculum vitae Amitee Lamy",
+        "Description": "CV of employee Amitee Lamy",
+        "Tags": [
+            "PDF",
+            "Personal"
+        ]
+    },
+    {
+        "DocumentType": "ASSESSMENT",
+        "Path": "employees/amitee_lamy_assessment.pdf",
+        "Filename": "amitee_lamy_assessment.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Assessment 2025 Amitee Lamy",
+        "Description": "Annual assessment 2025 of Amitee Lamy",
+        "Tags": [
+            "PDF",
+            "Personal",
+            "Important"
+        ]
+    },
+    {
+        "DocumentType": "PROFILE_PICTURE",
+        "Path": "employees/petr_herman_profile.jpg",
+        "Filename": "petr_herman_profile.jpg",
+        "Mimetype": "image/jpeg",
+        "Title": "Profile picture Petr Heřman",
+        "Description": "Profile picture of employee Petr Heřman",
+        "Tags": [
+            "Picture",
+            "Personal"
+        ]
+    },
+    {
+        "DocumentType": "CV",
+        "Path": "employees/petr_herman_cv.pdf",
+        "Filename": "petr_herman_cv.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Curriculum vitae Petr Heřman",
+        "Description": "CV of employee Petr Heřman",
+        "Tags": [
+            "PDF",
+            "Personal"
+        ]
+    },
+    {
+        "DocumentType": "ASSESSMENT",
+        "Path": "employees/petr_herman_assessment.pdf",
+        "Filename": "petr_herman_assessment.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Assessment 2025 Petr Heřman",
+        "Description": "Annual assessment 2025 of Petr Heřman",
+        "Tags": [
+            "PDF",
+            "Personal",
+            "Important"
+        ]
+    },
+    {
+        "DocumentType": "PROFILE_PICTURE",
+        "Path": "employees/timothy_b_manning_profile.jpg",
+        "Filename": "timothy_b_manning_profile.jpg",
+        "Mimetype": "image/jpeg",
+        "Title": "Profile picture Timothy B. Manning",
+        "Description": "Profile picture of employee Timothy B. Manning",
+        "Tags": [
+            "Picture",
+            "Personal"
+        ]
+    },
+    {
+        "DocumentType": "CV",
+        "Path": "employees/timothy_b_manning_cv.pdf",
+        "Filename": "timothy_b_manning_cv.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Curriculum vitae Timothy B. Manning",
+        "Description": "CV of employee Timothy B. Manning",
+        "Tags": [
+            "PDF",
+            "Personal"
+        ]
+    },
+    {
+        "DocumentType": "ASSESSMENT",
+        "Path": "employees/timothy_b_manning_assessment.pdf",
+        "Filename": "timothy_b_manning_assessment.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Assessment 2025 Timothy B. Manning",
+        "Description": "Annual assessment 2025 of Timothy B. Manning",
+        "Tags": [
+            "PDF",
+            "Personal",
+            "Important"
+        ]
+    },
+    {
+        "DocumentType": "PROFILE_PICTURE",
+        "Path": "employees/dorothea_manning_profile.jpg",
+        "Filename": "dorothea_manning_profile.jpg",
+        "Mimetype": "image/jpeg",
+        "Title": "Profile picture Dorothea Manning",
+        "Description": "Profile picture of employee Dorothea Manning",
+        "Tags": [
+            "Picture",
+            "Personal"
+        ]
+    },
+    {
+        "DocumentType": "CV",
+        "Path": "employees/dorothea_manning_cv.pdf",
+        "Filename": "dorothea_manning_cv.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Curriculum vitae Dorothea Manning",
+        "Description": "CV of employee Dorothea Manning",
+        "Tags": [
+            "PDF",
+            "Personal"
+        ]
+    },
+    {
+        "DocumentType": "ASSESSMENT",
+        "Path": "employees/dorothea_manning_assessment.pdf",
+        "Filename": "dorothea_manning_assessment.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Assessment 2025 Dorothea Manning",
+        "Description": "Annual assessment 2025 of Dorothea Manning",
+        "Tags": [
+            "PDF",
+            "Personal",
+            "Important"
+        ]
+    },
+    {
+        "DocumentType": "PROFILE_PICTURE",
+        "Path": "employees/bratoljub_ivankovic_profile.jpg",
+        "Filename": "bratoljub_ivankovic_profile.jpg",
+        "Mimetype": "image/jpeg",
+        "Title": "Profile picture Bratoljub Ivanković",
+        "Description": "Profile picture of employee Bratoljub Ivanković",
+        "Tags": [
+            "Picture",
+            "Personal"
+        ]
+    },
+    {
+        "DocumentType": "CV",
+        "Path": "employees/bratoljub_ivankovic_cv.pdf",
+        "Filename": "bratoljub_ivankovic_cv.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Curriculum vitae Bratoljub Ivanković",
+        "Description": "CV of employee Bratoljub Ivanković",
+        "Tags": [
+            "PDF",
+            "Personal"
+        ]
+    },
+    {
+        "DocumentType": "ASSESSMENT",
+        "Path": "employees/bratoljub_ivankovic_assessment.pdf",
+        "Filename": "bratoljub_ivankovic_assessment.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Assessment 2025 Bratoljub Ivanković",
+        "Description": "Annual assessment 2025 of Bratoljub Ivanković",
+        "Tags": [
+            "PDF",
+            "Personal",
+            "Important"
+        ]
+    },
+    {
+        "DocumentType": "CUSTOMER_PICTURE",
+        "Path": "customers/haircare_ag.png",
+        "Filename": "haircare_ag.png",
+        "Mimetype": "image/png",
+        "Title": "Logo Haircare AG",
+        "Description": "Picture of customer Haircare AG",
+        "Tags": [
+            "Picture"
+        ]
+    },
+    {
+        "DocumentType": "CUSTOMER_PICTURE",
+        "Path": "customers/flightservice_and_sons.png",
+        "Filename": "flightservice_and_sons.png",
+        "Mimetype": "image/png",
+        "Title": "Logo Flightservice and Sons",
+        "Description": "Picture of customer Flightservice and Sons",
+        "Tags": [
+            "Picture"
+        ]
+    },
+    {
+        "DocumentType": "CUSTOMER_PICTURE",
+        "Path": "customers/machines_and_more.png",
+        "Filename": "machines_and_more.png",
+        "Mimetype": "image/png",
+        "Title": "Logo Machines and More",
+        "Description": "Picture of customer Machines and More",
+        "Tags": [
+            "Picture"
+        ]
+    },
+    {
+        "DocumentType": "CUSTOMER_PICTURE",
+        "Path": "customers/mountain_climbers_ug.png",
+        "Filename": "mountain_climbers_ug.png",
+        "Mimetype": "image/png",
+        "Title": "Logo Mountain Climbers UG",
+        "Description": "Picture of customer Mountain Climbers UG",
+        "Tags": [
+            "Picture"
+        ]
+    },
+    {
+        "DocumentType": "CUSTOMER_PICTURE",
+        "Path": "customers/lemon_squeezer.png",
+        "Filename": "lemon_squeezer.png",
+        "Mimetype": "image/png",
+        "Title": "Logo Lemon Squeezer",
+        "Description": "Picture of customer Lemon Squeezer",
+        "Tags": [
+            "Picture"
+        ]
+    },
+    {
+        "DocumentType": "CUSTOMER_PICTURE",
+        "Path": "customers/aquarius_interactive.png",
+        "Filename": "aquarius_interactive.png",
+        "Mimetype": "image/png",
+        "Title": "Logo Aquarius Interactive",
+        "Description": "Picture of customer Aquarius Interactive",
+        "Tags": [
+            "Picture"
+        ]
+    },
+    {
+        "DocumentType": "CUSTOMER_PICTURE",
+        "Path": "customers/army_spy_kg.png",
+        "Filename": "army_spy_kg.png",
+        "Mimetype": "image/png",
+        "Title": "Logo Army Spy KG",
+        "Description": "Picture of customer Army Spy KG",
+        "Tags": [
+            "Picture"
+        ]
+    },
+    {
+        "DocumentType": "VEHICLE_PICTURE",
+        "Path": "vehicles/garbage_truck_rh_101.jpg",
+        "Filename": "garbage_truck_rh_101.jpg",
+        "Mimetype": "image/jpeg",
+        "Title": "Garbage truck RH-101",
+        "Description": "Rear loader for household waste, 26 t",
+        "Tags": [
+            "Picture"
+        ]
+    },
+    {
+        "DocumentType": "VEHICLE_PICTURE",
+        "Path": "vehicles/container_truck_rh_205.jpg",
+        "Filename": "container_truck_rh_205.jpg",
+        "Mimetype": "image/jpeg",
+        "Title": "Container truck RH-205",
+        "Description": "Roll-off container truck, 40 m3 container",
+        "Tags": [
+            "Picture"
+        ]
+    },
+    {
+        "DocumentType": "VEHICLE_PICTURE",
+        "Path": "vehicles/street_sweeper_rh_310.jpg",
+        "Filename": "street_sweeper_rh_310.jpg",
+        "Mimetype": "image/jpeg",
+        "Title": "Street sweeper RH-310",
+        "Description": "Compact street sweeper for city areas",
+        "Tags": [
+            "Picture"
+        ]
+    },
+    {
+        "DocumentType": "VEHICLE_PICTURE",
+        "Path": "vehicles/service_van_rh_402.jpg",
+        "Filename": "service_van_rh_402.jpg",
+        "Mimetype": "image/jpeg",
+        "Title": "Service van RH-402",
+        "Description": "Service van for container exchange and repairs",
+        "Tags": [
+            "Picture"
+        ]
+    },
+    {
+        "DocumentType": "VEHICLE_PICTURE",
+        "Path": "vehicles/pickup_rh_515.jpg",
+        "Filename": "pickup_rh_515.jpg",
+        "Mimetype": "image/jpeg",
+        "Title": "Pickup RH-515",
+        "Description": "Pickup truck for bulky waste and recycling bins",
+        "Tags": [
+            "Picture"
+        ]
+    },
+    {
+        "DocumentType": "PICKUP_LIST",
+        "Path": "pickup_lists/pickup_list_2025_0412.pdf",
+        "Filename": "pickup_list_2025_0412.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Pickup list 2025-0412 (13.10.2025)",
+        "Description": "Collection tour 13.10.2025 with Garbage truck RH-101",
+        "Tags": [
+            "PDF",
+            "Important"
+        ]
+    },
+    {
+        "DocumentType": "PICKUP_LIST",
+        "Path": "pickup_lists/pickup_list_2025_0413.pdf",
+        "Filename": "pickup_list_2025_0413.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Pickup list 2025-0413 (14.10.2025)",
+        "Description": "Collection tour 14.10.2025 with Container truck RH-205",
+        "Tags": [
+            "PDF",
+            "Important"
+        ]
+    },
+    {
+        "DocumentType": "PICKUP_LIST",
+        "Path": "pickup_lists/pickup_list_2025_0414.pdf",
+        "Filename": "pickup_list_2025_0414.pdf",
+        "Mimetype": "application/pdf",
+        "Title": "Pickup list 2025-0414 (15.10.2025)",
+        "Description": "Collection tour 15.10.2025 with Pickup RH-515",
+        "Tags": [
+            "PDF",
+            "Important"
+        ]
+    }
+]
